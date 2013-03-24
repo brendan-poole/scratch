@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+</head>
+
+<body>
+<p id="fps">??? fps</p>
+<div id="mapv"  style="position: relative; width: 320px; height: 320px; overflow:hidden"> 
+
+<div id="map"  style="position:absolute; width: 320px; height: 320px;"> 
+</div>
+</div>
+<script>
+var d = document.createElement("div");
+var map = document.getElementById("map");
+d.innerHTML = "ss";
+document.body.appendChild(d);
+for( var x = 0; x < 100; x++) {
+var div = document.createElement("div");
+div.style.width = "32px";
+div.style.height = "32px";
+div.style.background =  "#"+Math.floor((Math.random() * 0xffffff)).toString(16);
+div.style.color = "black"
+div.innerHTML =  "";
+div.style.cssFloat =  "left";
+		map.appendChild(div);
+}
+alert(1);
+	var avgDelay = 0;
+	var lastDraw = new Date;
+	var p = 0;
+	
+	var jiggle = function(){
+		
+		map.style.left = p +"px";
+		var now = new Date;
+		var delay = now - lastDraw;
+		avgDelay += (delay - avgDelay) / 10;
+		lastDraw = now;
+		p+=1;
+		var t = setTimeout(jiggle,0);
+		if(p==64) {
+			clearTimeout(t);
+		}
+	}
+	jiggle();
+	setInterval(function(){
+				fps.innerHTML = (1000/avgDelay).toFixed(1) + " fps";
+	},1000);
+
+</script>
+</div>
+</body>
+</html>
