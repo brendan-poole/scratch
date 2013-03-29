@@ -1,12 +1,48 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
 <style>
+body {
+	background-image: linear-gradient(bottom, rgb(18,104,133) 33%, rgb(7,62,88) 67%, rgb(3,47,80) 84%);
+	background-image: -o-linear-gradient(bottom, rgb(18,104,133) 33%, rgb(7,62,88) 67%, rgb(3,47,80) 84%);
+	background-image: -moz-linear-gradient(bottom, rgb(18,104,133) 33%, rgb(7,62,88) 67%, rgb(3,47,80) 84%);
+	background-image: -webkit-linear-gradient(bottom, rgb(18,104,133) 33%, rgb(7,62,88) 67%, rgb(3,47,80) 84%);
+	background-image: -ms-linear-gradient(bottom, rgb(18,104,133) 33%, rgb(7,62,88) 67%, rgb(3,47,80) 84%);
+	
+	background-image: -webkit-gradient(
+		linear,
+		left bottom,
+		left top,
+		color-stop(0.33, rgb(18,104,133)),
+		color-stop(0.67, rgb(7,62,88)),
+		color-stop(0.84, rgb(3,47,80))
+	);
+}
+#table1 {
+	position: relative;
+}
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
 <body>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#button2").click(function(){
+		  $("#table1").animate({left:'500px', opacity: '0'});
+		  $("#table1").animate({left:'0', opacity: '1'});
+	});
+	$("#button1").click(function(){
+		  $("#div1").fadeToggle();
+		  $("#div2").fadeToggle("slow");
+		  $("#div3").fadeToggle(3000);
+	});
+});
+
+</script>
+	<img src="rect3179.png"/>
+	<div id="table1">
 	<table border="1">
 		<tr>
 			<th>Inputs</th>	
@@ -23,5 +59,11 @@
 			<td>NAME_TRANSPORT_FORMAT</td>	
 		</tr>
 	</table>
+	</div>
+	<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+	<button id="button1">fade</button>
+	<button id="button2">admin</button>
 </body>
 </html>
