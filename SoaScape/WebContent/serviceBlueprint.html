@@ -16,6 +16,24 @@ color: white;
 #table1 {
 	position: relative;
 }
+#logo {
+	position: absolute;
+	left: 0px;
+	
+}
+#logo_blur {
+	position: absolute;
+	left: 0px;
+	
+}
+nav ul li {
+	display: block;
+	float: left;
+	margin-left: 16px;
+}
+#ask {
+	float: right;
+}
 </style>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
@@ -23,6 +41,7 @@ color: white;
 <body>
 <script type="text/javascript">
 $(document).ready(function(){
+	$("#logo_blur").animate({opacity: '0'}, 2000);
 	$("#button2").click(function(){
 		  $("#table1").animate({left:'500px', opacity: '0'});
 		  $("#table1").animate({left:'0', opacity: '1'});
@@ -36,10 +55,18 @@ $(document).ready(function(){
 
 </script>
 	<div id="head">
-	<img src="rect4134.png"/>
-	<p>Reusable services to order</p>
+	<img id="logo" src="logo.png"/>
+	<img id="logo_blur" src="logo_blur.png" />
+	<p>Developing the building blocks to your company's success</p>
+	<nav><ul>
+		<li>Home</li>
+		<li>About Us</li>
+		<li>Services</li>
+	</ul></nav>
+	<div id="ask">Talk to a SOA expert now: 209837428374</div>
 	</div>
 	<div id="table1">
+		Tell us a little about your project's requirements...
 	<table border="1">
 		<tr>
 			<th>Inputs</th>	
