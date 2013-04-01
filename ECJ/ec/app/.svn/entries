@@ -1,0 +1,137 @@
+10
+
+dir
+1278
+svn://nl-vm-web01/brendan/ECJ/ec/app
+svn://nl-vm-web01
+
+
+
+2010-08-24T15:19:39.218739Z
+51
+brendan
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+d75296cc-1107-3f4d-93a2-a19c90134815
+
+README
+file
+
+
+
+
+2011-09-04T11:46:40.000000Z
+c1d8df8eca0913e249fe876eaac3fc55
+2010-08-24T15:19:39.218739Z
+51
+brendan
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+174
+
+ant
+dir
+
+async
+dir
+
+coevolve1
+dir
+
+coevolve2
+dir
+
+ecsuite
+dir
+
+edge
+dir
+
+gui
+dir
+
+hiff
+dir
+
+lawnmower
+dir
+
+moosuite
+dir
+
+multiplexer
+dir
+
+multiplexerslow
+dir
+
+nk
+dir
+
+parity
+dir
+
+regression
+dir
+
+sat
+dir
+
+serengeti
+dir
+
+spatial
+dir
+
+star
+dir
+
+sum
+dir
+
+tutorial1
+dir
+
+tutorial2
+dir
+
+tutorial3
+dir
+
+tutorial4
+dir
+
+twobox
+dir
+

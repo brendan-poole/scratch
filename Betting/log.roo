@@ -1,0 +1,79 @@
+// Spring Roo 1.1.0.M1 [rev 3a0b8a3] log opened at 2010-08-18 07:47:45
+project --topLevelPackage com.gosseyn.shares.price
+persistence setup --database POSTGRES --provider HIBERNATE 
+entity --class Price
+field string --fieldName symbol
+field date --fieldName date_ --type java.util.Date
+// [failed] field number --fieldName open --type java.lang.Double
+field number --fieldName open_ --type java.lang.Double
+field number --fieldName high --type java.lang.Double
+field number --fieldName low --type java.lang.Double
+// [failed] field number --fieldName close --type java.lang.Double
+field number --fieldName close_ --type java.lang.Double
+field number --fieldName adj_close --type java.lang.Double
+q
+// Spring Roo 1.1.0.M1 [rev 3a0b8a3] log closed at 2010-08-18 07:55:16
+// Spring Roo 1.1.0.M1 [rev 3a0b8a3] log opened at 2010-08-18 11:26:45
+// Spring Roo 1.0.2.RELEASE [rev 638] log opened at 2010-11-13 21:43:37
+q
+// Spring Roo 1.0.2.RELEASE [rev 638] log closed at 2010-11-13 21:43:43
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log opened at 2011-09-04 18:19:07
+entity --class com.gosseyn.greyhounds.domain.Race
+field date --fieldName started --type java.util.Date
+field string --fieldName grade
+field number --fieldName distance --type java.lang.Integer
+field string --fieldName prize
+entity --class com.gosseyn.greyhounds.domain.Greyhounds
+field number --fieldName going --type java.lang.Integer --class com.gosseyn.greyhounds.domain.Race
+// [failed] entity --class com.gosseyn.greyhounds.domain.Result
+entity --class com.gosseyn.greyhounds.domain.DogRace
+field reference --fieldName dog --type com.gosseyn.greyhounds.domain.Greyhound
+field reference --fieldName race --type com.gosseyn.greyhounds.domain.Race
+field number --fieldName fin --type java.lang.Integer
+field number --fieldName stmHcp --type java.lang.Float
+// [failed] field number --fieldName by --type java.lang.Float
+field number --fieldName by_ --type java.lang.Float
+field string --fieldName remarks
+field number --fieldName winTm --type java.lang.Float
+field number --fieldName sp --type float
+field number --fieldName calcTm --type float
+field string --fieldName class_ --class com.gosseyn.greyhounds.domain.Race
+entity --class com.gosseyn.greyhounds.domain.Venue
+field string --fieldName name
+field reference --fieldName venue --type com.gosseyn.greyhounds.domain.Venue --class com.gosseyn.greyhounds.domain.Race
+field string --fieldName name --class com.gosseyn.greyhounds.domain.Dog
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log closed at 2011-09-04 20:28:41
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log opened at 2011-09-08 20:42:30
+ent --class com.gosseyn.betfair.domain.Market
+field string name
+// [failed] field date --fieldName start --type java.util.Calendar
+field date --fieldName startTime --type java.util.Calendar
+field string --fieldName venue
+field number --fieldName marketId --type java.lang.Long
+ent --class com.gosseyn.betfair.domain.Runner
+field number --fieldName selectionId --type java.lang.Long --unique 
+entity --class com.gosseyn.betfair.domain.Price
+field set --fieldName prices --type com.gosseyn.betfair.domain.Price --class com.gosseyn.betfair.domain.Runner
+field date --fieldName readTime --type java.util.Date
+field set --fieldName runners --type com.gosseyn.betfair.domain.Runner --class com.gosseyn.betfair.domain.Market
+field reference --fieldName market --type com.gosseyn.betfair.domain.Market --class com.gosseyn.betfair.domain.Runner
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log opened at 2011-09-09 12:19:41
+quit
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log closed at 2011-09-09 13:28:40
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log opened at 2011-09-09 14:14:42
+finder list --class com.gosseyn.betfair.domain.Market
+finder add --finderName findMarketsByMarketIdEquals
+finder add --finderName findMarketsByStartTimeGreaterThanEquals
+quit
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log closed at 2011-09-09 14:18:27
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log opened at 2011-09-09 21:36:52
+entity --class com.gosseyn.betfair.domain.PriceSummary
+field date --fieldName time_ --type java.util.Date
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log opened at 2011-09-11 10:59:15
+// Spring Roo 1.1.4.RELEASE [rev f787ce7] log opened at 2011-09-12 11:50:01
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log opened at 2011-12-18 09:35:56
+quit
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log closed at 2011-12-18 09:37:33
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log opened at 2011-12-18 10:04:39
+quit
+// Spring Roo 1.2.0.M1 [rev 1fa252f] log closed at 2011-12-18 21:51:14
