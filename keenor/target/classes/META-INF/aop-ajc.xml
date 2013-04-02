@@ -1,0 +1,11 @@
+<aspectj>
+<aspects>
+<aspect name="uk.co.keenors.domain.Entity_Roo_ToString"/>
+<aspect name="uk.co.keenors.domain.Entity_Roo_Jpa_Entity"/>
+<aspect name="uk.co.keenors.domain.ApplicationConversionServiceFactoryBean_Roo_ConversionService"/>
+<aspect name="uk.co.keenors.domain.Entity_Roo_Jpa_ActiveRecord"/>
+<aspect name="uk.co.keenors.domain.Entity_Roo_Configurable"/>
+<aspect name="uk.co.keenors.domain.EntityController_Roo_Controller"/>
+</aspects>
+</aspectj>
+

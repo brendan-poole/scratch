@@ -1,0 +1,8 @@
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log opened at 2013-04-02 21:26:37
+project --topLevelPackage uk.co.keenors
+persistence setup --provider HIBERNATE --database HYPERSONIC_IN_MEMORY 
+entity jpa --class uk.co.keenors.domain.Entity
+web mvc setup
+web mvc scaffold --class ~.domain.EntityController
+quit
+// Spring Roo 1.2.3.RELEASE [rev 7fd62b6] log closed at 2013-04-02 21:29:36
