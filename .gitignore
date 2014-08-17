@@ -1,2 +1,8 @@
 OracleSOA/OracleSOA/classes/.data/00000000/je.lck
 OracleSOA/OracleSOA/classes/.data/00000000/00000000.jdb
+
+*.class
+**/.classpath
+**/.project
+.settings/
+target/
